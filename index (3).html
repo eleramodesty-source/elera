@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELERA | Refined Modesty</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">ELERA</div>
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="cart-icon"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Refined Modesty</h1>
+        <p>A modern take on timeless elegance.</p>
+        <a href="#collection" class="btn">Explore Collection</a>
+    </div>
+</section>
+
+<!-- Our Story Section -->
+<section id="story" class="story-section">
+    <div class="container">
+        <h2 class="section-title">Our Story</h2>
+        <div class="story-content">
+            <p>Modesty began as a quiet idea forming in the minds of two cousins who shared a deep love for fashion and design. Over time, they noticed a clear gap in the market; modest clothing that felt both elegant and high quality was hard to find. The options available were often either unreasonably expensive or made with thin, low-quality fabrics that didn’t reflect the value women deserved.</p>
+            <p>With that realization, and the right encouragement at the right moment, they decided to create something different. A brand built on intention, quality, and refined style. All the odds were against them from the beginning, but that never stopped them from building the brand day and night, driven by hope, faith, and a vision they truly believed in.</p>
+            <p>Modesty was born not just as a clothing label, but as a purpose—to empower women, elevate their confidence, and offer modest wear that feels both beautiful and worthy. And from that vision, the clothing brand <strong>Elera</strong> was made.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Collection Section -->
+<section id="collection" class="shop">
+    <div class="container">
+        <h2 class="section-title">The Collection</h2>
+        <div class="product-grid">
+            <!-- All products with their respective .png filenames -->
+            <div class="product-card">
+                <div class="image-container"><img src="black-abaya.png" alt="Black Abaya"></div>
+                <div class="product-info">
+                    <h3>Black Abaya</h3>
+                    <p class="price">$58.00</p>
+                    <button class="btn add-to-cart" data-name="Black Abaya" data-price="58">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container"><img src="brown-abaya.png" alt="Brown Abaya"></div>
+                <div class="product-info">
+                    <h3>Brown Abaya</h3>
+                    <p class="price">$52.00</p>
+                    <button class="btn add-to-cart" data-name="Brown Abaya" data-price="52">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container"><img src="olive-abaya.png" alt="Olive Abaya"></div>
+                <div class="product-info">
+                    <h3>Olive Abaya</h3>
+                    <p class="price">$60.00</p>
+                    <button class="btn add-to-cart" data-name="Olive Abaya" data-price="60">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container"><img src="pink-pattern abaya.png" alt="Pink Pattern"></div>
+                <div class="product-info">
+                    <h3>Pink Pattern</h3>
+                    <p class="price">$65.00</p>
+                    <button class="btn add-to-cart" data-name="Pink Pattern" data-price="65">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container"><img src="sand minimal abaya.png" alt="Sand Minimal"></div>
+                <div class="product-info">
+                    <h3>Sand Minimal</h3>
+                    <p class="price">$55.00</p>
+                    <button class="btn add-to-cart" data-name="Sand Minimal" data-price="55">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <p>For inquiries regarding our collection or custom orders.</p>
+                <p><strong>Email:</strong> elera.modesty@gmail.com</p>
+                <p><strong>Location:</strong> West Beqaa, Lebanon</p>
+                <p><strong>Instagram:</strong> <a href="https://instagram.com/eleramodesty" target="_blank">@eleramodesty</a></p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Cart & Checkout UI -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <span id="close-cart">&times;</span>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+        <div class="cart-total">Total: $<span id="total-price">0</span></div>
+        <button class="btn checkout-btn" id="open-checkout">Checkout</button>
+    </div>
+</div>
+
+<section id="checkout-section" class="checkout-overlay">
+    <div class="checkout-container">
+        <span id="close-checkout" class="close-icon">&times;</span>
+        <h2 class="section-title">Checkout</h2>
+        <div class="checkout-grid">
+            <div class="order-summary">
+                <h3>Summary</h3>
+                <div id="checkout-list"></div>
+                <div class="final-total">Total: $<span id="checkout-total">0</span></div>
+            </div>
+            <form id="order-form" class="contact-form">
+                <h3>Details</h3>
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Phone" required>
+                <input type="text" placeholder="Address (West Beqaa)" required>
+                <h3>Payment</h3>
+                <div class="payment-options">
+                    <label class="payment-label"><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label>
+                    <label class="payment-label"><input type="radio" name="payment" value="wish"> Wish Money</label>
+                </div>
+                <div id="wish-instructions" style="display:none; background:#f9f9f9; padding:10px; border:1px solid var(--nude-medium); font-size:0.8rem; margin-bottom:10px;">
+                    <p>Send transfer to our Wish account. Contact us on Instagram for details.</p>
+                </div>
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 ELERA. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Menu Logic
+    const menuBtn = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    menuBtn.onclick = () => navLinks.classList.toggle('active');
+
+    // Cart Logic
+    let cart = [];
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartCount = document.getElementById('cart-count');
+    const cartItemsDiv = document.getElementById('cart-items');
+    const totalEl = document.getElementById('total-price');
+
+    document.getElementById('cart-icon').onclick = (e) => { e.preventDefault(); cartSidebar.classList.add('active'); };
+    document.getElementById('close-cart').onclick = () => cartSidebar.classList.remove('active');
+
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+        btn.onclick = () => {
+            cart.push({ name: btn.dataset.name, price: parseInt(btn.dataset.price) });
+            updateCart();
+            cartSidebar.classList.add('active');
+        };
+    });
+
+    function updateCart() {
+        cartCount.innerText = cart.length;
+        cartItemsDiv.innerHTML = cart.map(i => `<div class="cart-item"><span>${i.name}</span><span>$${i.price}</span></div>`).join('');
+        const total = cart.reduce((s, i) => s + i.price, 0);
+        totalEl.innerText = total;
+        document.getElementById('checkout-total').innerText = total;
+        document.getElementById('checkout-list').innerHTML = cart.map(i => `<div style="display:flex;justify-content:space-between"><span>${i.name}</span><span>$${i.price}</span></div>`).join('');
+    }
+
+    // Checkout Logic
+    document.getElementById('open-checkout').onclick = () => {
+        if(cart.length === 0) return alert("Cart empty!");
+        cartSidebar.classList.remove('active');
+        document.getElementById('checkout-section').style.display = 'flex';
+    };
+    document.getElementById('close-checkout').onclick = () => document.getElementById('checkout-section').style.display = 'none';
+
+    document.querySelectorAll('input[name="payment"]').forEach(r => {
+        r.onchange = () => document.getElementById('wish-instructions').style.display = (r.value === 'wish') ? 'block' : 'none';
+    });
+
+    document.getElementById('order-form').onsubmit = (e) => {
+        e.preventDefault();
+        alert("Order received! We'll contact you for delivery in West Beqaa.");
+        cart = []; updateCart(); document.getElementById('checkout-section').style.display = 'none';
+    };
+</script>
+</body>
+</html>
